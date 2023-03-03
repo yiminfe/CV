@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,13 +48,9 @@
           max-height: 2246px;
         }
 
-        /* .project-item.page {
-          padding-top: 1cm;
-        } */
-
         .module-title.page {
           display: flex;
-          padding-top: 1cm;
+          padding-top: 1.3cm;
         }
       }
       /* 简历标题 */
@@ -160,6 +156,10 @@
         margin-bottom: 7px;
       }
 
+      .advantages li:last-child {
+        margin-bottom: 0px;
+      }
+
       /* 工作经历模块样式 */
 
       /* 时间线样式 */
@@ -252,7 +252,7 @@
       .module-description {
         font-size: 14px;
         text-size-adjust: none;
-        margin: 20px 0px;
+        margin-top: 20px;
         padding-left: 46px;
         display: flex;
         flex-direction: column;
@@ -261,11 +261,6 @@
         list-style: none;
         margin: 0;
         padding: 0;
-        margin-top: 20px;
-      }
-
-      .project-item {
-        margin-bottom: 20px;
       }
       .project-meta {
         margin-bottom: 15px;
@@ -290,8 +285,16 @@
       }
       .project-row {
         display: flex;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         justify-content: flex-end;
+      }
+
+      .project-row:last-child {
+        margin-bottom: 0px;
+      }
+
+      .project-row:last-child .project-list-inline li:last-child {
+        margin-bottom: 0px;
       }
 
       .project-label {
@@ -320,10 +323,7 @@
         padding-left: 45px;
         display: flex;
         flex-direction: column;
-      }
-
-      .other-project-outer > li {
-        font-weight: bold;
+        margin: 0px;
       }
 
       .other-project-outer li {
@@ -332,9 +332,22 @@
         margin-bottom: 7px;
       }
 
+      .other-project-outer > li {
+        font-weight: bold;
+        margin-bottom: 7px;
+      }
+
+      .other-project-outer li:last-child {
+        margin-bottom: 0px;
+      }
+
       .other-project-inner {
         display: flex;
         flex-direction: column;
+        margin-bottom: 15px;
+      }
+      .other-project-inner.last {
+        margin-bottom: 0px;
       }
 
       .school {
@@ -659,7 +672,7 @@
               </li>
             </ul>
             <li>北京若为信息技术有限公司</li>
-            <ul class="other-project-inner">
+            <ul class="other-project-inner last">
               <li>
                 <a
                   class="info-item"
