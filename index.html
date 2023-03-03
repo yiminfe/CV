@@ -239,10 +239,11 @@
       .timeline-item-achievement {
         font-size: 14px;
         text-size-adjust: none;
-        text-indent: 68px;
+        display: flex;
       }
       .timeline-item-achievement b {
-        margin-right: 20px;
+        margin-right: 25px;
+        text-indent: 68px;
       }
 
       .module-description {
@@ -250,6 +251,8 @@
         text-size-adjust: none;
         margin: 20px 0px;
         padding-left: 46px;
+        display: flex;
+        flex-direction: column;
       }
       .project-list {
         list-style: none;
@@ -312,6 +315,8 @@
 
       .other-project-outer {
         padding-left: 45px;
+        display: flex;
+        flex-direction: column;
       }
 
       .other-project-outer > li {
@@ -322,6 +327,11 @@
         font-size: 14px;
         text-size-adjust: none;
         margin-bottom: 7px;
+      }
+
+      .other-project-inner {
+        display: flex;
+        flex-direction: column;
       }
 
       .school {
