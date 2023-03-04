@@ -4,6 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script>
+      const screenWidth = window.innerWidth
+      const designWidth = 794 // 设计稿宽度
+      const scale = screenWidth / designWidth
+      const viewport = document.querySelector('meta[name="viewport"]')
+      viewport.setAttribute(
+        'content',
+        `width=${designWidth}, initial-scale=${scale}`
+      )
+    </script>
+
     <title>个人简历</title>
 
     <style>
@@ -677,7 +688,7 @@
         </div>
       </div>
     </div>
-    <script>
+    <!-- <script>
       // // 获取设备宽度
       const deviceWidth = window.screen.width
 
@@ -687,6 +698,6 @@
           .querySelector('meta[name="viewport"]')
           .setAttribute('content', `width=device-width, initial-scale=${scale}`)
       }
-    </script>
+    </script> -->
   </body>
 </html>
