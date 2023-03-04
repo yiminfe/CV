@@ -2,18 +2,16 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>个人简历</title>
     <style>
       /* 最外层容器 */
       body {
         background-color: #000000;
-        margin: 0;
         padding: 0;
+        width: 100%;
+        margin: 0 auto;
       }
 
       p {
@@ -56,6 +54,7 @@
           padding-top: 1.3cm;
         }
       }
+
       /* 简历标题 */
       .header {
         display: flex;
@@ -703,5 +702,21 @@
         </div>
       </div>
     </div>
+
+    <!-- <script>
+      // 获取设备宽度
+      const deviceWidth = window.innerWidth
+
+      // 计算缩放比例
+      const scale = deviceWidth / 794
+
+      // 设置 viewport 的 width 属性
+      document
+        .querySelector('meta[name="viewport"]')
+        .setAttribute('content', `width=794`)
+
+      // 设置 body 的缩放比例
+      document.body.style.zoom = scale
+    </script> -->
   </body>
 </html>
