@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>个人简历</title>
+    <script>
+      // // 获取设备宽度
+      const deviceWidth = window.screen.width
+
+      if (deviceWidth < 794) {
+        const scale = deviceWidth / 794
+        document
+          .querySelector('meta[name="viewport"]')
+          .setAttribute('content', `width=device-width, initial-scale=${scale}`)
+      }
+    </script>
+
     <style>
       /* 最外层容器 */
       body {
@@ -258,6 +270,7 @@
         font-size-adjust: 0.5;
         margin-top: 20px;
         padding-left: 46px;
+        -webkit-text-size-adjust: 100%;
       }
       .project-list {
         list-style: none;
@@ -702,16 +715,5 @@
         </div>
       </div>
     </div>
-    <script>
-      // 获取设备宽度
-      const deviceWidth = window.screen.width
-
-      if (deviceWidth < 794) {
-        const scale = deviceWidth / 794
-        document
-          .querySelector('meta[name="viewport"]')
-          .setAttribute('content', `width=device-width, initial-scale=${scale}`)
-      }
-    </script>
   </body>
 </html>
