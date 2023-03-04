@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
 
     <script>
       const screenWidth = window.innerWidth
@@ -15,7 +16,7 @@
       )
     </script>
 
-    <title>个人简历</title>
+    <title>赵依民（资深大前端研发工程师）</title>
 
     <style>
       * {
@@ -246,16 +247,18 @@
 
       .timeline-item-achievement {
         display: flex;
+        padding-left: 125px;
       }
-      .timeline-item-achievement b {
-        margin-right: 25px;
-        text-indent: 68px;
+      .timeline-item-achievement ul {
+        list-style-type: circle;
+        margin: 0px;
       }
 
       .module-description {
         padding-top: 20px;
         padding-left: 46px;
         -webkit-text-size-adjust: 100%;
+        display: none;
       }
       .project-list {
         list-style: none;
@@ -270,14 +273,19 @@
 
       .project-name {
         font-weight: bold;
-        width: 143px;
-        text-align: right;
+        width: 171px;
+        text-align: left;
+      }
+
+      .project-name ul {
+        margin: 0px;
+        padding-left: 45px;
       }
 
       .project-info {
         display: flex;
         justify-content: space-between;
-        width: 550px;
+        width: 523px;
       }
       .project-row {
         display: flex;
@@ -303,7 +311,7 @@
         flex-direction: column;
         margin: 0;
         padding: 0;
-        width: 535px;
+        width: 507px;
         list-style-type: circle;
       }
 
@@ -335,6 +343,7 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 15px;
+        margin-left: 126px;
       }
       .other-project-inner.last {
         margin-bottom: 0px;
@@ -343,10 +352,21 @@
       .school {
         display: flex;
         justify-content: space-between;
-        padding-left: 45px;
       }
-      .school span:first-child {
+      .school > ul {
+        padding-left: 45px;
+        margin: 0px;
         font-weight: bold;
+      }
+
+      .school-honor {
+        padding-left: 90px;
+        list-style-type: circle;
+        margin: 15px 0px;
+      }
+
+      .school-honor li {
+        margin-bottom: 10px;
       }
     </style>
   </head>
@@ -386,22 +406,23 @@
           <div class="separator"></div>
         </div>
         <ul class="advantages">
-          <li>有浏览器、网络、Chrome V8 底层原理和 Vue 源码学习研究经验。</li>
+          <li>熟悉浏览器、网络、Chrome V8 底层原理，深入研究过 Vue 的源码。</li>
           <li>
-            有全面的技术栈，熟练 Vue、React 周边库和前端工程化，有 SSR
-            经验。有小程序 和 App 经验。
+            全面的技术栈，熟练 Vue、React 及周边库，精通前端工程化和
+            SSR，拥有小程序 和 Flutter 经验。
           </li>
           <li>
-            有 Node.js 经验，熟悉 Web Server 框架选型和高可用 Server 端架构。
+            具备 Node.js 技术背景，熟悉 Web Server 框架选型和高可用 Server
+            端架构。
           </li>
           <li>
-            有技术攻坚、独立研究、架构设计的能力。有较高的互联网产品安全、性能优化、用户体验、创意意识。
+            具备技术攻坚、独立研究、架构设计能力，重视产品安全、性能优化、用户体验、创新意识。
           </li>
           <li>
-            有大厂和创业团队协作经历。有互联网和非互联网产品创业经历。善于沟通和总结，敢于尝试和挑战。
+            在大厂和创业团队协作中积累了丰富经验，拥有互联网和非互联网产品创业经历，善于沟通总结，敢于挑战。
           </li>
           <li>
-            有 ChatGPT 深度研究使用经验。当前简历就是使用 ChatGPT
+            拥有 ChatGPT 深度研究和应用经验，当前简历使用 ChatGPT
             进行设计和开发。
           </li>
         </ul>
@@ -417,14 +438,17 @@
             <div class="timeline-item-line"></div>
             <div class="timeline-item-content">
               <div class="timeline-item-header">
-                <span class="timeline-item-date">2021.10 — 2023.01</span>
+                <span class="timeline-item-date">2021.10 — 2023.02</span>
                 <span class="timeline-item-company">长沙自主创业</span>
                 <span class="timeline-item-position">创业者、持续学习者</span>
               </div>
               <div class="timeline-item-body">
                 <div class="timeline-item-achievement">
-                  <b>主要成就</b>
-                  为当地创造了就业岗位。对过往职业经历进行复盘，重新定义自己的职业规划。
+                  <ul>
+                    <li>
+                      为本地社区提供就业机会。回顾过往职业经历，重新规划职业发展路线。
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -441,9 +465,12 @@
               </div>
               <div class="timeline-item-body">
                 <div class="timeline-item-achievement">
-                  <b>主要成就</b>
-                  2020 年 9 月，晋升好评通过，Top 30。2020 年年度绩效为 A，Top
-                  20。
+                  <ul>
+                    <li>
+                      2020 年 9 月，成功晋升，通过率 30%。2020 年年度绩效为
+                      A，集团 Top 20。
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -460,9 +487,12 @@
               </div>
               <div class="timeline-item-body">
                 <div class="timeline-item-achievement">
-                  <b>主要成就</b>
-                  独立研究 Flutter 新技术，并成功交付 4 个
-                  App。为公司节省了一定的研发成本。
+                  <ul>
+                    <li>
+                      独立研究 Flutter 新技术，并成功交付 4 个
+                      App。为公司节省了一定的研发成本。
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -479,9 +509,11 @@
               </div>
               <div class="timeline-item-body">
                 <div class="timeline-item-achievement">
-                  <b>主要成就</b>
-                  2016 年 8 月获得了口粮 App
-                  动画创意奖杯，并获得最佳优秀员工荣誉证书。
+                  <ul>
+                    <li>
+                      获得 2016 年口粮 App 动画创意奖杯和最佳优秀员工荣誉证书。
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -497,7 +529,11 @@
         <div class="project-list">
           <div class="project-item">
             <div class="project-meta">
-              <div class="project-name">学而思图书商城</div>
+              <div class="project-name">
+                <ul>
+                  <li>学而思图书商城系统</li>
+                </ul>
+              </div>
               <div class="project-info">
                 <span class="project-industry"
                   >好未来集团教育图书 C 端电商系统</span
@@ -519,17 +555,24 @@
               <div class="project-row">
                 <div class="project-label">难点</div>
                 <ul class="project-list-inline">
-                  <li>难点描述1。</li>
-                  <li>难点描述2。</li>
-                  <li>难点描述3。</li>
+                  <li>
+                    商城首页、活动推广页：多模块，大数据量加载，首屏性能差。
+                  </li>
+                  <li>
+                    跨部门对接多款知名 App，研发样式、用户鉴权、交易方式差异化。
+                  </li>
+                  <li>SKU 管理：易误操作、风险高，需灵活易用、安全可靠。</li>
                 </ul>
               </div>
               <div class="project-row">
                 <div class="project-label">成就</div>
                 <ul class="project-list-inline">
-                  <li>项目成就1。</li>
-                  <li>项目成就2。</li>
-                  <li>项目成就3。</li>
+                  <li>优化大数据量加载，实现首屏 0.5 TTI、0 RTT 交互。</li>
+                  <li>实现差异化配置，多渠道交易，业绩提升 600 万/月。。</li>
+                  <li>
+                    重构 SKU
+                    管理系统，提高效率，减少风险。晋升述职重构细节，获得好评通过。
+                  </li>
                 </ul>
               </div>
             </div>
@@ -545,10 +588,14 @@
         <div class="project-list page">
           <div class="project-item">
             <div class="project-meta">
-              <div class="project-name">学而思图书商城</div>
+              <div class="project-name">
+                <ul>
+                  <li>大后台管理项目整合</li>
+                </ul>
+              </div>
               <div class="project-info">
                 <span class="project-industry"
-                  >好未来集团教育图书 C 端电商系统</span
+                  >好未来图书集采系统（集团内部 B 端电商）、多个后台管理</span
                 >
                 <span class="project-time">2019.08 — 2021.09</span>
               </div>
@@ -557,38 +604,50 @@
               <div class="project-row">
                 <div class="project-label">技术栈</div>
                 <ul class="project-list-inline">
-                  <li>技术栈1</li>
-                  <li>技术栈2</li>
+                  <li>Vue2、Vuex、Element UI、微前端（阿里 qiankun）</li>
+                  <li>集采：Vue3、Element Plus</li>
                 </ul>
               </div>
               <div class="project-row">
                 <div class="project-label">难点</div>
                 <ul class="project-list-inline">
-                  <li>难点描述1。</li>
-                  <li>难点描述2。</li>
-                  <li>难点描述3。</li>
+                  <li>
+                    多项目技术栈不统一，有乙方、现有团队、前团队交接项目。
+                  </li>
+                  <li>
+                    项目功能重叠，数据不互通，如登录、权限、商品、订单、题库、可视化数据等。
+                  </li>
+                  <li>
+                    跨部门沟通对接多个系统，如知音楼、组织架构、好未来
+                    AI、财务等。
+                  </li>
                 </ul>
               </div>
               <div class="project-row">
                 <div class="project-label">成就</div>
                 <ul class="project-list-inline">
-                  <li>项目成就1。</li>
-                  <li>项目成就2。</li>
-                  <li>项目成就3。</li>
+                  <li>
+                    用微前端统一大后台，项目独立部署，无技术栈限制，统一权限、域名、登录。
+                  </li>
+                  <li>确保团队在新业务中尝试新技术，保持学习的欲望。</li>
+                  <li>
+                    研究 Vue3、微前端，提升前端团队实力，提高运营团队效率。
+                  </li>
+                  <li>2020 年年度绩效评分为 A，全集团 Top 20。</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
         <div class="module-description">
-          以上只介绍主要项目经验。其它项目经验不做过多介绍。下面提供部分项目的可访问地址。
+          只列举了主要项目经验，其余部分项目在（部分可访问项目）中补充。
         </div>
       </div>
 
       <div class="module">
         <div class="module-title">
           <span class="icon">🌐</span>
-          <span class="text">可访问项目</span>
+          <span class="text">部分可访问项目</span>
           <div class="separator"></div>
         </div>
 
@@ -599,74 +658,120 @@
               <li>
                 <a
                   class="info-item"
-                  href="https://www.huaweirom.com/shooting/14890/"
+                  href="https://yiminfe.github.io/CV/"
                   target="_blank"
                   >本人简历在线版</a
                 >、<a
                   class="info-item"
-                  href="https://ssr.yiminfe.com/home"
+                  href="https://yiminfe.github.io/CV/"
                   target="_blank"
                   >ChatGPT 介绍官网</a
+                >、<a
+                  class="info-item"
+                  href="https://yiminfe.github.io/CV/"
+                  target="_blank"
+                  >图书商城首页</a
+                >
+              </li>
+              <li>
+                <a
+                  class="info-item"
+                  href="https://yiminfe.github.io/CV/"
+                  target="_blank"
+                  >后台管理系统</a
+                >、<a
+                  class="info-item"
+                  href="https://yiminfe.github.io/CV/"
+                  target="_blank"
+                  >Markdown 文件管理系统</a
+                >、<a
+                  class="info-item"
+                  href="https://yiminfe.github.io/CV/"
+                  target="_blank"
+                  >权限管理系统</a
                 >
               </li>
             </ul>
             <li>个人项目</li>
             <ul class="other-project-inner">
               <li>
+                全栈技术合伙人、品牌创始人之一（2019 年）：
                 <a
                   class="info-item"
                   href="https://www.huaweirom.com/shooting/14890/"
                   target="_blank"
-                  >Young 健身 App（技术合伙人）</a
-                >、<a
+                  >Young 健身 App</a
+                >
+              </li>
+              <li>
+                远程前端技术合伙人（2022 年）：
+                <a
+                  class="info-item"
+                  href="https://humanmazu.com/"
+                  target="_blank"
+                  >mazu 中文学习官网（Nuxt2）</a
+                >
+              </li>
+              <li>
+                学习项目（2022 年）：<a
                   class="info-item"
                   href="https://ssr.yiminfe.com/home"
                   target="_blank"
-                  >SSR 渲染学习项目（Nuxt3）</a
+                  >官网 SSR 渲染（Nuxt3）</a
+                >、<a
+                  class="info-item"
+                  href="https://github.com/yiminfe/vue-mini"
+                  target="_blank"
+                  >实现迷你 Vue3 框架</a
                 >
               </li>
             </ul>
             <li>北京学而思教育科技有限公司</li>
             <ul class="other-project-inner">
               <li>
+                前端项目主导（2021 年）：
                 <a
                   class="info-item"
                   href="https://bookh5.xueersibook.com/cicp/store/goods/home"
                   target="_blank"
-                  >学而思图书商城（前端项目主导）</a
-                >、<a
-                  class="info-item"
-                  href="https://bookh5.xueersibook.com/cicp/platform/shop/index"
-                  target="_blank"
-                  >学而思微课程（前端项目研发）</a
+                  >学而思图书商城</a
                 >、<a
                   class="info-item"
                   href="https://bookh5.xueersibook.com/cicp/mobi/home"
                   target="_blank"
-                  >摩比爱识字（前端项目主导）</a
+                  >摩比爱识字</a
+                >
+              </li>
+              <li>
+                前端项目研发（2020 年）：<a
+                  class="info-item"
+                  href="https://bookh5.xueersibook.com/cicp/platform/shop/index"
+                  target="_blank"
+                  >学而思微课程</a
                 >
               </li>
             </ul>
             <li>北京博雅智学软件股份有限公司</li>
             <ul class="other-project-inner">
               <li>
+                Flutter App 项目负责人（2019 年）：
                 <a
                   class="info-item"
                   href="https://zhsz.bjedu.cn/web/login/index"
                   target="_blank"
-                  >北京小学综素 App 和 北京中学综素 App（Flutter App
-                  项目负责人、前端项目研发）</a
+                  >北京小学综素 App、北京中学综素 App</a
                 >
               </li>
             </ul>
             <li>北京若为信息技术有限公司</li>
             <ul class="other-project-inner last">
               <li>
+                iOS 项目负责人（2018 年）：
                 <a
                   class="info-item"
                   href="https://baike.baidu.com/item/%E5%8F%A3%E7%B2%AE/19767215"
                   target="_blank"
-                  >口粮 APP（iOS 项目负责人）</a
+                  >口粮 APP</a
                 >
               </li>
             </ul>
@@ -682,22 +787,18 @@
         </div>
         <!-- 教育经历 -->
         <div class="school">
-          <span>湖南工商大学（湖南商学院）</span>
+          <ul>
+            <li>湖南工商大学（湖南商学院）</li>
+          </ul>
           <span>计算机应用技术（大专）</span>
           <span>2013.09 — 2016.06</span>
         </div>
+
+        <ul class="school-honor">
+          <li>大二获得特效网页大赛，一等奖</li>
+          <li>大一获得静态网页大赛，二等奖</li>
+        </ul>
       </div>
     </div>
-    <!-- <script>
-      // // 获取设备宽度
-      const deviceWidth = window.screen.width
-
-      if (deviceWidth < 794) {
-        const scale = deviceWidth / 794
-        document
-          .querySelector('meta[name="viewport"]')
-          .setAttribute('content', `width=device-width, initial-scale=${scale}`)
-      }
-    </script> -->
   </body>
 </html>
