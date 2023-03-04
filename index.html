@@ -702,21 +702,16 @@
         </div>
       </div>
     </div>
-
-    <!-- <script>
+    <script>
       // 获取设备宽度
-      const deviceWidth = window.innerWidth
+      const deviceWidth = window.screen.width
 
-      // 计算缩放比例
-      const scale = deviceWidth / 794
-
-      // 设置 viewport 的 width 属性
-      document
-        .querySelector('meta[name="viewport"]')
-        .setAttribute('content', `width=794`)
-
-      // 设置 body 的缩放比例
-      document.body.style.zoom = scale
-    </script> -->
+      if (deviceWidth < 794) {
+        const scale = deviceWidth / 794
+        document
+          .querySelector('meta[name="viewport"]')
+          .setAttribute('content', `width=device-width, initial-scale=${scale}`)
+      }
+    </script>
   </body>
 </html>
