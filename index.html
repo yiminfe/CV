@@ -887,17 +887,32 @@
       </div>
     </div>
     <div class="download-container">
-      <div class="download-btn" onclick="downloadPDF()">
+      <div class="download-btn" id="download">
         <span class="icon">⬇️</span>
         <span class="text" id="download-text">dark 简历</span>
       </div>
-      <div class="download-btn" onclick="toggleTheme()">
+      <div class="download-btn" id="theme">
         <span class="icon">🎨</span>
         <span class="text" id="theme-text">light 主题</span>
       </div>
     </div>
 
     <script>
+      let timeout
+      function debounce(func, wait) {
+        return function executedFunction() {
+          const args = arguments
+
+          const later = function () {
+            timeout = null
+            func.apply(this, args)
+          }
+
+          clearTimeout(timeout)
+          timeout = setTimeout(later, wait)
+        }
+      }
+
       let isLightMode = false
 
       function updateBtnText() {
@@ -928,6 +943,19 @@
         }
         window.open(url, '_blank')
       }
+
+      document
+        .getElementById('download')
+        .addEventListener('click', debounce(downloadPDF, 250))
+      document
+        .getElementById('download')
+        .addEventListener('touchend', debounce(downloadPDF, 250))
+      document
+        .getElementById('theme')
+        .addEventListener('click', debounce(toggleTheme, 250))
+      document
+        .getElementById('theme')
+        .addEventListener('touchend', debounce(toggleTheme, 250))
     </script>
   </body>
 </html>
