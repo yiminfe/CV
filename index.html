@@ -59,14 +59,17 @@
       }
 
       .download-container {
-        position: absolute;
+        position: fixed;
         bottom: 80px;
         right: 50%;
         display: flex;
+        width: 150px;
+        height: 150px;
         margin-right: -597px;
         flex-direction: column;
         align-items: center;
         z-index: 9999;
+        background-color: red;
       }
 
       .download-btn {
@@ -392,6 +395,17 @@
         margin-bottom: 10px;
       }
 
+      @media (max-width: 794px) {
+        .download-container {
+          margin-right: 0px;
+          right: 80px;
+        }
+        .download-btn {
+          background-color: var(--bg-color);
+          color: var(--text-color);
+          box-shadow: 2px 2px 8px var(--bg-color);
+        }
+      }
       /* 打印时样式，调整A4纸容器的大小 */
       @media print {
         .a4-container {
@@ -422,18 +436,6 @@
 
         .timeline-item-line {
           left: 30px;
-        }
-      }
-
-      @media (max-width: 794px) {
-        .download-container {
-          margin-right: 0px;
-          right: 80px;
-        }
-        .download-btn {
-          background-color: var(--bg-color);
-          color: var(--text-color);
-          box-shadow: 2px 2px 8px var(--bg-color);
         }
       }
     </style>
@@ -941,16 +943,16 @@
       downloadButton.addEventListener('click', debounce(downloadPDF, 100))
       themeButton.addEventListener('click', debounce(toggleTheme, 100))
 
-      const downloadContainer = document.querySelector('.download-container')
-      function handleScroll() {
-        if (window.pageYOffset > 0) {
-          downloadContainer.style.bottom = `${80 - window.pageYOffset}px`
-        } else {
-          downloadContainer.style.bottom = '80px'
-        }
-      }
-      window.addEventListener('scroll', handleScroll)
-      window.addEventListener('touchmove', handleScroll)
+      // const downloadContainer = document.querySelector('.download-container')
+      // function handleScroll() {
+      //   if (window.pageYOffset > 0) {
+      //     downloadContainer.style.bottom = `${80 - window.pageYOffset}px`
+      //   } else {
+      //     downloadContainer.style.bottom = '80px'
+      //   }
+      // }
+      // window.addEventListener('scroll', handleScroll)
+      // window.addEventListener('touchmove', handleScroll)
     </script>
   </body>
 </html>
