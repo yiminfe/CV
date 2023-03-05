@@ -56,19 +56,21 @@
         padding: 0px;
       }
 
-      /* 下载按钮 */
-
       .download-container {
         position: fixed;
-        transform: translateZ(0);
-        -webkit-transform: translateZ(0);
-        bottom: 80px;
+        bottom: 220px;
         right: 50%;
         display: flex;
-        margin-right: -597px;
+        margin-right: -520px;
         flex-direction: column;
         align-items: center;
         z-index: 9999;
+      }
+
+      .download-container-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
       }
 
       .download-btn {
@@ -80,23 +82,10 @@
         background-color: var(--text-color);
         box-shadow: 2px 2px 8px var(--text-color);
         border-radius: 4px;
-        margin: 10px 0px;
+        margin: 20px 0px;
         color: var(--bg-color);
         font-size: 16px;
         cursor: pointer;
-        transition: transform 0.25s ease-out;
-      }
-
-      .download-btn:hover {
-        transform: scale(1.1);
-      }
-
-      .download-btn:active {
-        transform: scale(1);
-      }
-
-      .download-btn.touchend {
-        transform: scale(1);
       }
 
       .download-btn .icon {
@@ -442,8 +431,9 @@
 
       @media (max-width: 794px) {
         .download-container {
-          margin-right: 0px;
-          right: 80px;
+          margin: 0px;
+          /* margin-left: -200px; */
+          right: 220px;
         }
         .download-btn {
           background-color: var(--bg-color);
@@ -893,13 +883,15 @@
       </div>
     </div>
     <div class="download-container">
-      <div class="download-btn" id="download">
-        <span class="icon">⬇️</span>
-        <span class="text" id="download-text">dark 简历</span>
-      </div>
-      <div class="download-btn" id="theme">
-        <span class="icon">🎨</span>
-        <span class="text" id="theme-text">light 主题</span>
+      <div class="download-container-wrap">
+        <div class="download-btn" id="download">
+          <span class="icon">⬇️</span>
+          <span class="text" id="download-text">dark 简历</span>
+        </div>
+        <div class="download-btn" id="theme">
+          <span class="icon">🎨</span>
+          <span class="text" id="theme-text">light 主题</span>
+        </div>
       </div>
     </div>
 
@@ -928,6 +920,9 @@
         ThemeText.innerHTML = `${isLightMode ? 'dark' : 'light'} 主题`
       }
 
+      const downloadButton = document.getElementById('download')
+      const themeButton = document.getElementById('theme')
+
       function toggleTheme() {
         const body = document.body
         isLightMode = !isLightMode
@@ -950,27 +945,8 @@
         window.open(url, '_blank')
       }
 
-      const downloadButton = document.getElementById('download')
-      const themeButton = document.getElementById('theme')
-
-      downloadButton.addEventListener('click', debounce(downloadPDF, 250))
-      downloadButton.addEventListener('touchend', debounce(downloadPDF, 250))
-      themeButton.addEventListener('click', debounce(toggleTheme, 250))
-      themeButton.addEventListener('touchend', debounce(toggleTheme, 250))
-
-      downloadButton.addEventListener('touchmove', () => {
-        downloadButton.classList.add('touchend')
-      })
-      themeButton.addEventListener('touchmove', () => {
-        themeButton.classList.add('touchend')
-      })
-
-      downloadButton.addEventListener('touchend', () => {
-        downloadButton.classList.remove('touchend')
-      })
-      themeButton.addEventListener('touchend', () => {
-        themeButton.classList.remove('touchend')
-      })
+      downloadButton.addEventListener('click', debounce(downloadPDF, 100))
+      themeButton.addEventListener('click', debounce(toggleTheme, 100))
     </script>
   </body>
 </html>
